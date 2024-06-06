@@ -1,3 +1,8 @@
-<h3>Dedica muchas horas</h3>
+<!-- <h3>Dedica muchas horas</h3>
 <p>Al menos 30 horas a la semana. Si no tienes suficiente, tendrás que dedicarle más horas.
-Al principio parece imposible, pero notarás una mejoría rápidamente.</p>
+Al principio parece imposible, pero notarás una mejoría rápidamente.</p> -->
+
+@for(step of steps; track step.title){
+  <h3>{{ step.title}}</h3>
+  <p>{{step.descripcion}}</p>
+}

@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject} from '@angular/core';
 import { EscenaComponent } from '../escena/escena.component';
+import { StepsService } from '../steps.service';
+import { IStep } from '../i-step';
 
 @Component({
   selector: 'app-home',
@@ -9,5 +11,10 @@ import { EscenaComponent } from '../escena/escena.component';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  public stepsService = inject(StepsService);
 
+  getDatos(){
+    return this.stepsService.steps
+    // this.stepsService.getSteps()
+  }
 }

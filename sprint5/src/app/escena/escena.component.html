@@ -2,7 +2,19 @@
 <p>Al menos 30 horas a la semana. Si no tienes suficiente, tendrás que dedicarle más horas.
 Al principio parece imposible, pero notarás una mejoría rápidamente.</p> -->
 
-@for(step of steps; track step.title){
-  <h3>{{ step.title}}</h3>
-  <p>{{step.descripcion}}</p>
-}
+<div class="container">
+  @for(step of steps; track step.title){
+    <div class="card">
+      <div class="step" [ngStyle]="{'background-color': step.bgcolor}">
+        <img [src]="step.img" class="card-img-top" alt="imagen">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"> {{step.title}}</h5>
+        <p class="card-text"> {{step.descripcion}}</p>
+      </div>
+      <button class="icon-button" (click)="handleClick()">
+        <img src="assets/circle-arrow-right-solid.svg" alt="icono">
+      </button>
+    </div>
+    }
+</div>

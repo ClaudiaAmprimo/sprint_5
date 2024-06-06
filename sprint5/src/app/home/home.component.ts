@@ -1,7 +1,7 @@
 import { Component, inject} from '@angular/core';
 import { EscenaComponent } from '../escena/escena.component';
 import { StepsService } from '../steps.service';
-import { IStep } from '../i-step';
+// import { IStep } from '../i-step';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +15,5 @@ export class HomeComponent {
 
   getDatos(){
     return this.stepsService.steps
-    // this.stepsService.getSteps()
   }
 }

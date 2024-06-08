@@ -1,14 +1,21 @@
 .container{
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .card{
   width: 18rem;
-  border-radius: 10px;
+  height: 44rem;
+  border-radius: 34px;
   overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0;
+  padding-bottom: 70px;
 }
 
 .step{
@@ -30,6 +37,7 @@
 .card-body{
   padding: 20px;
   text-align: left;
+  flex-grow: 1;
 }
 
 .card-title {
@@ -45,16 +53,38 @@
 .icon-button {
   background: none;
   border: none;
-  padding: 15px;
-  margin-right: 15px;
-  margin-bottom: 20px;
+  padding: 10px;
   border-radius: 50%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
+  position: absolute;
+  bottom: -4px;
+  right: 20px;
 }
 
 .icon-button img{
   width: 38px;
   height: 38px;
+}
+
+.navigation-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.indicators {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.indicators img {
+  width: 8px;
+  height: 8px;
 }

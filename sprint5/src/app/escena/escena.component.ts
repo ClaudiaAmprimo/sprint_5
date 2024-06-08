@@ -12,8 +12,32 @@ import { CommonModule } from '@angular/common';
 })
 export class EscenaComponent {
   @Input() steps: IStep[] = [];
+  currentStep: number = 0;
+  isReversing: boolean = false;
+
+  nextStep() {
+    if (this.currentStep < this.steps.length - 1) {
+      this.currentStep++;
+    }
+  }
+
+  prevStep() {
+    if (this.currentStep > 0) {
+      this.currentStep--;
+    }
+  }
 
   handleClick() {
-    console.log('Icon button clicked');
+    if (this.isReversing) {
+      this.prevStep();
+      if (this.currentStep === 0) {
+        this.isReversing = false;
+      }
+    } else {
+      this.nextStep();
+      if (this.currentStep === this.steps.length - 1) {
+        this.isReversing = true;
+      }
+    }
   }
 }

@@ -1,7 +1,7 @@
 <!-- <h3>Dedica muchas horas</h3>
 <p>Al menos 30 horas a la semana. Si no tienes suficiente, tendrás que dedicarle más horas.
 Al principio parece imposible, pero notarás una mejoría rápidamente.</p> -->
-
+<!--
 <div class="container">
   @for(step of steps; track step.title){
     <div class="card">
@@ -17,4 +17,38 @@ Al principio parece imposible, pero notarás una mejoría rápidamente.</p> -->
       </button>
     </div>
     }
+</div> -->
+
+<div class="container custom-container">
+  <div class="card">
+    @if(steps.length > 0){
+    <div class="step" [ngStyle]="{'background-color': steps[currentStep].bgcolor}">
+      <img [src]="steps[currentStep].img" class="card-img-top" alt="imagen">
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ steps[currentStep].title }}</h5>
+      <p class="card-text">{{ steps[currentStep].descripcion }}</p>
+    </div>
+    <div>
+      <div class="navigation-container">
+        <div class="indicators">
+          @for (step of steps; track step.title) {
+            @if (steps.indexOf(step) === currentStep) {
+              <img src="assets/circle-solid-black.svg" class="minus" alt="indicator">
+            } @else {
+              <img src="assets/circle-solid.svg" alt="indicator">
+            }
+          }
+        </div>
+        <button class="icon-button" (click)="handleClick()">
+          @if (isReversing) {
+            <img src="assets/circle-arrow-left-solid.svg" alt="icono">
+          } @else {
+            <img src="assets/circle-arrow-right-solid.svg" alt="icono">
+          }
+        </button>
+      </div>
+    </div>
+  }
+  </div>
 </div>

@@ -40,4 +40,9 @@ export class EscenaComponent {
       }
     }
   }
+
+  handleDots(index: number) {
+    this.currentStep = index;
+    this.isReversing = this.currentStep === this.steps.length - 1;
+  }
 }

@@ -33,11 +33,13 @@ Al principio parece imposible, pero notarás una mejoría rápidamente.</p> -->
       <div class="navigation-container">
         <div class="indicators">
           @for (step of steps; track step.title) {
-            @if (steps.indexOf(step) === currentStep) {
-              <img src="assets/circle-solid-black.svg" class="minus" alt="indicator">
-            } @else {
-              <img src="assets/circle-solid.svg" alt="indicator">
-            }
+            <button class="dots-button" (click)="handleDots(steps.indexOf(step))">
+              @if (steps.indexOf(step) === currentStep) {
+                <img src="assets/circle-solid-black.svg" alt="indicator">
+              } @else {
+                <img src="assets/circle-solid.svg" alt="indicator">
+              }
+            </button>
           }
         </div>
         <button class="icon-button" (click)="handleClick()">

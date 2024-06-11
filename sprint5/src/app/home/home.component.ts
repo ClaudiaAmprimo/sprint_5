@@ -1,7 +1,6 @@
 import { Component, inject} from '@angular/core';
 import { EscenaComponent } from '../escena/escena.component';
 import { StepsService } from '../steps.service';
-// import { IStep } from '../i-step';
 
 @Component({
   selector: 'app-home',

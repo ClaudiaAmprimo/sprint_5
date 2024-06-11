@@ -58,9 +58,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  bottom: -4px;
-  right: 20px;
 }
 
 .icon-button img{
@@ -92,4 +89,10 @@
 .dots-button{
   background: none;
   border: none;
+  margin-top: 20px;
+}
+
+.icon-buttons {
+  display: flex;
+  gap: -48px;
 }

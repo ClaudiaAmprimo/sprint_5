@@ -3,11 +3,12 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  padding: 20px;
 }
 
 .card{
-  width: 18rem;
-  height: 44rem;
+  max-width: 18rem;
+  max-height: 44rem;
   border-radius: 34px;
   overflow: hidden;
   position: relative;
@@ -95,4 +96,30 @@
 .icon-buttons {
   display: flex;
   gap: -48px;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.slide-left {
+  animation: slideInLeft 0.5s forwards;
+}
+
+.slide-right {
+  animation: slideInRight 0.5s forwards;
 }

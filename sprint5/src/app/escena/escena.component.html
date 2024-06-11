@@ -1,7 +1,7 @@
 <div class="container custom-container">
   <div class="card">
     @if(steps.length > 0){
-      <div class="step" [ngStyle]="{'background-color': steps[currentStep].bgcolor}">
+      <div class="step"  [ngClass]="animationClass" [ngStyle]="{'background-color': steps[currentStep].bgcolor}">
         <img [src]="steps[currentStep].img" class="card-img-top" alt="imagen">
       </div>
       <div class="card-body">
